@@ -1,4 +1,4 @@
-%This function removes from subset A all elements greater than a, keeping only those that are less than or equal to a. The updated subset is returned as the result.
+%This function removes elements greater than a from the subset A.
 function A = remove_elements_greater_than(A, a)
     i = 1;
     while i <= length(A)
