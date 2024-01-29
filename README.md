@@ -1,19 +1,20 @@
 # Subset Generation Algorithm
 ## Description
 
-This algorithm is designed to generate all subsets of a given set. It utilizes several helper functions that perform various operations on the set. Here are their descriptions:
-### 1. generate_subsets(set, A)
+This repository contains a set of MATLAB functions for working with subsets of a given set. Below are descriptions of each function
 
-This function generates all subsets of the set, starting from subset A, and returns them as a cell array.
-### 2. find_max_element_not_in_A(set, A)
+### 1. 'find_max_element_not_in_A(zbior, A)'
 
-This function finds the largest element in the set that is not part of subset A. It returns this element as the result.
-### 3. subset(n, X)
+This function finds the maximum element in the set `zbior` that is not present in the subset `A`.
+### 2. 'remove_elements_greater_than(A, a)'
 
-The function creates a new subset by adding element n (if it is not -inf), removes elements greater than n, and returns the new subset along with the success status of the operation.
-### 4. remove_elements_greater_than(A, a)
+This function removes elements greater than `a` from the subset `A`.
+### 3. 'generate_subsets(zbior, A, num)'
 
-This function removes from subset A all elements greater than a, keeping only those that are less than or equal to a. The updated subset is returned as the result.
+This function generates subsets of the set `zbior` based on the provided parameters.
+### 4. 'create_subset(zbior, A)'
+
+This function creates a subset by adding the maximum element not in `A` to the existing subset.
 Example Usage
 
 matlab
@@ -34,7 +35,7 @@ for i = 1:length(subsets)
     disp(subsets{i});
 end
 ```
-##License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
