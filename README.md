@@ -17,31 +17,23 @@ This function removes from subset A all elements greater than a, keeping only th
 Example Usage
 
 matlab
-
+```
 % Example usage of the subset generation algorithm
-set = [1, 2, 3];
-A = [];
-results = generate_subsets(set, A);
+% Define the set and subset A
+set = [1, 2, 3, 4, 5, 6, 7];
+A = [1, 2, 3, 5];
 
-disp("All subsets of the set:");
-disp(results);
+% Define the value of n (if you want all consecutive subsets, don't pass n to the function)
+n = 10;
 
-max_element = find_max_element_not_in_A(set, A);
-disp("Largest element not in A:");
-disp(max_element);
+% Generate subsets using the provided function
+subsets = generate_subsets(set, A, n);
 
-n = 2;
-[X, success] = subset(n, A);
-disp("New subset after adding element " + n + ":");
-disp(X);
-disp("Operation successful: " + success);
-
-a = 2;
-A = [1, 2, 3];
-new_subset = remove_elements_greater_than(A, a);
-disp("Updated subset after removing elements greater than " + a + ":");
-disp(new_subset);
-
+% Display the generated subsets
+for i = 1:length(subsets)
+    disp(subsets{i});
+end
+```
 ##License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
