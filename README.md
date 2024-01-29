@@ -42,7 +42,7 @@ new_subset = remove_elements_greater_than(A, a);
 disp("Updated subset after removing elements greater than " + a + ":");
 disp(new_subset);
 
-License
+##License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
